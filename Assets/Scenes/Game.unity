@@ -272,14 +272,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8037735, g: 0.39885363, b: 0.39885363, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1137662626, guid: 4df279ca552c8e86191926d46c65bdf6, type: 3}
+  m_Sprite: {fileID: -7377295934022830490, guid: 1d699aa70a44ad047870d30986ec12b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -309,6 +309,8 @@ GameObject:
   - component: {fileID: 354960558}
   - component: {fileID: 354960557}
   - component: {fileID: 354960556}
+  - component: {fileID: 354960559}
+  - component: {fileID: 354960560}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -379,7 +381,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 354960557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 354960559}
+        m_TargetAssemblyTypeName: MyPackage.Modules.Init.InitEvents, Assembly-CSharp
+        m_MethodName: Init
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &354960557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -418,6 +432,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354960554}
   m_CullTransparentMesh: 1
+--- !u!114 &354960559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354960554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d2194b596d9f612a55c2ac17688719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyPackage.Modules.Init.InitEvents
+  _interval: 1
+  _canStart: 0
+  _events:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 354960560}
+        m_TargetAssemblyTypeName: MyPackage.Tools.UI.Animations.AnimationScale, Assembly-CSharp
+        m_MethodName: AnimateOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1215953449}
+        m_TargetAssemblyTypeName: MyPackage.Tools.UI.Animations.AnimationRotate,
+          Assembly-CSharp
+        m_MethodName: AnimateOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &354960560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354960554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c46158f82de5dc3ca7ce2143fbb8d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyPackage.Tools.UI.Animations.AnimationScale
+  _timeToShow: 1
+  _timeToHide: 1
+  _isLooping: 0
+  _visibleScale: {x: 1, y: 1, z: 1}
+  _hiddenScale: {x: 0.8, y: 0.8, z: 0.8}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +718,7 @@ GameObject:
   - component: {fileID: 1215953446}
   - component: {fileID: 1215953448}
   - component: {fileID: 1215953447}
+  - component: {fileID: 1215953449}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -709,6 +783,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215953445}
   m_CullTransparentMesh: 1
+--- !u!114 &1215953449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215953445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74724dfcc9217c14bb06a3b2ecf8d130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyPackage.Tools.UI.Animations.AnimationRotate
+  _timeToShow: 1
+  _timeToHide: 1
+  _isLooping: 0
+  _visibleRotation: {x: 0, y: 0, z: 0}
+  _hiddenRotation: {x: 0, y: 0, z: -180}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

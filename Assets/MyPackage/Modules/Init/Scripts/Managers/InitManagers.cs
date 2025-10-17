@@ -36,7 +36,7 @@ namespace MyPackage.Modules.Init
                     break;
                 //case TypeStrategyInitManagers.YG2:
                 //    _initManagersStrategy = new YG2StrategyInitManagers();
-                    break;
+                    //break;
                 default:
                     break;
             }

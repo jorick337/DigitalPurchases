@@ -19,7 +19,7 @@ namespace MyPackage.Modules.Saver
                     break;
                 //case TypeStrategyInitManagers.YG2:
                 //    _strategy = new YGSaveStrategy();
-                    break;
+                    //break;
                 default:
                     break;
             }

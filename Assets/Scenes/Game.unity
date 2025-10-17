@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 354960559}
   - component: {fileID: 354960560}
   - component: {fileID: 354960561}
+  - component: {fileID: 354960562}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -477,6 +478,18 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 354960562}
+        m_TargetAssemblyTypeName: Game.Play.Welcome.WelcomeLoader, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 354960561}
         m_TargetAssemblyTypeName: MyPackage.Tools.UI.Destroyer, Assembly-CSharp
         m_MethodName: DestroySelf
@@ -518,6 +531,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a7f9de92b813d47b618263a656aa55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyPackage.Tools.UI.Destroyer
+--- !u!114 &354960562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354960554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2aa0dcb0a40254b9f95c679744cf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WelcomeLoader
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyPackage.Tools.UI.Animations.AnimationRotate
   _timeToShow: 1
-  _timeToHide: 1
+  _timeToHide: 0.3
   _isLooping: 0
   _visibleRotation: {x: 0, y: 0, z: 0}
   _hiddenRotation: {x: 0, y: 0, z: -180}

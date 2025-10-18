@@ -6,6 +6,8 @@ namespace Game.Play.Welcome
     {
         public WelcomeLoader Instance { get; private set; }
 
+        [SerializeField] private bool _instance = false;
+
         private WelcomeProvider _welcomeProvider = new();
 
         private void Awake() => Instance = this;
